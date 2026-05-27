@@ -3,20 +3,25 @@
   border-bottom: 1px solid var(--global-divider-color);
   box-shadow: none;
   opacity: 0.95;
+  top: 0;
 }
 
 @media (min-width: 576px) {
   .navbar > .container {
-    justify-content: center;
+    position: relative;
   }
 
   .navbar .navbar-collapse-main {
+    position: absolute;
+    left: 50%;
     flex-grow: 0;
     justify-content: center;
-    width: auto;
+    width: max-content;
+    transform: translateX(-50%);
   }
 
   .navbar .navbar-menu-list {
+    align-items: center;
     justify-content: center;
   }
 }
