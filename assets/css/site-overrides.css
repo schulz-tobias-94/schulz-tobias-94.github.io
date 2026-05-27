@@ -5,11 +5,18 @@
   opacity: 0.95;
 }
 
-.navbar .navbar-collapse {
-  justify-content: center;
-}
+@media (min-width: 576px) {
+  .navbar > .container {
+    justify-content: center;
+  }
 
-.navbar .navbar-nav {
-  margin-right: auto;
-  margin-left: auto;
+  .navbar .navbar-collapse-main {
+    flex-grow: 0;
+    justify-content: center;
+    width: auto;
+  }
+
+  .navbar .navbar-menu-list {
+    justify-content: center;
+  }
 }
