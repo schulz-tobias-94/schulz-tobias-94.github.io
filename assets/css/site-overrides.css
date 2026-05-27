@@ -1,0 +1,89 @@
+body > nav.navbar,
+body header nav.navbar,
+.navbar.navbar-expand-md,
+.navbar.navbar-expand-lg {
+  background-color: rgba(255, 255, 255, 0.72) !important;
+  border-bottom: 1px solid rgba(20, 20, 20, 0.08);
+  box-shadow: 0 10px 30px rgba(20, 20, 20, 0.06);
+  -webkit-backdrop-filter: blur(14px) saturate(1.2);
+  backdrop-filter: blur(14px) saturate(1.2);
+}
+
+body > nav.navbar::after,
+body header nav.navbar::after,
+.navbar.navbar-expand-md::after,
+.navbar.navbar-expand-lg::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -18px;
+  left: 0;
+  height: 18px;
+  pointer-events: none;
+  background: linear-gradient(rgba(255, 255, 255, 0.28), rgba(255, 255, 255, 0));
+}
+
+.navbar .navbar-collapse {
+  justify-content: center;
+}
+
+.navbar .navbar-nav {
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.navbar .navbar-nav .nav-link {
+  border-radius: 999px;
+  padding-right: 0.85rem;
+  padding-left: 0.85rem;
+}
+
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link:focus {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+html[data-theme="dark"] body > nav.navbar,
+html[data-theme="dark"] body header nav.navbar,
+html[data-theme="dark"] .navbar.navbar-expand-md,
+html[data-theme="dark"] .navbar.navbar-expand-lg,
+body.dark > nav.navbar,
+body.dark header nav.navbar,
+body.dark .navbar.navbar-expand-md,
+body.dark .navbar.navbar-expand-lg {
+  background-color: rgba(18, 18, 18, 0.72) !important;
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.22);
+}
+
+html[data-theme="dark"] body > nav.navbar::after,
+html[data-theme="dark"] body header nav.navbar::after,
+html[data-theme="dark"] .navbar.navbar-expand-md::after,
+html[data-theme="dark"] .navbar.navbar-expand-lg::after,
+body.dark > nav.navbar::after,
+body.dark header nav.navbar::after,
+body.dark .navbar.navbar-expand-md::after,
+body.dark .navbar.navbar-expand-lg::after {
+  background: linear-gradient(rgba(18, 18, 18, 0.28), rgba(18, 18, 18, 0));
+}
+
+html[data-theme="dark"] .navbar .navbar-nav .nav-link:hover,
+html[data-theme="dark"] .navbar .navbar-nav .nav-link:focus,
+body.dark .navbar .navbar-nav .nav-link:hover,
+body.dark .navbar .navbar-nav .nav-link:focus {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+@media (min-width: 768px) {
+  .navbar .navbar-collapse {
+    position: absolute;
+    right: 0;
+    left: 0;
+    display: flex !important;
+    pointer-events: none;
+  }
+
+  .navbar .navbar-nav {
+    pointer-events: auto;
+  }
+}
