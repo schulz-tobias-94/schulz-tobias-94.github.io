@@ -7,17 +7,19 @@
 }
 
 @media (min-width: 576px) {
+  .navbar .navbar-brand {
+    display: none;
+  }
+
   .navbar > .container {
-    position: relative;
+    justify-content: center;
   }
 
   .navbar .navbar-collapse-main {
-    position: absolute;
-    left: 50%;
+    flex-basis: auto;
     flex-grow: 0;
     justify-content: center;
-    width: max-content;
-    transform: translateX(-50%);
+    width: auto;
   }
 
   .navbar .navbar-menu-list {
