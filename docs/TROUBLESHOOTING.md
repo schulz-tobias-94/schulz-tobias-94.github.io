@@ -77,10 +77,10 @@ This guide covers common issues and their solutions. For more information, see [
 
 **Solution:**
 
-1. Check your **Settings** → **Pages** → **Source** is set to `Deploy from a branch`
-2. Ensure the branch is set to `gh-pages` (NOT `main`)
+1. Check your **Settings** → **Pages** → **Source** is set to `GitHub Actions`
+2. Ensure the `Deploy site` workflow is the workflow producing the Pages deployment
 3. Wait 5 minutes and check Actions again
-4. The issue usually resolves after you verify the gh-pages branch is set
+4. The issue usually resolves after GitHub Pages uses the Bundler-based workflow instead of the stock Jekyll builder
 
 ---
 
