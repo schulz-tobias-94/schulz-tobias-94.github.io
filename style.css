@@ -300,8 +300,10 @@ h3 {
 }
 
 .location {
-  color: var(--accent-dark);
-  font-size: 0.95rem;
+  color: #58787d;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 0.9rem;
+  font-style: normal;
 }
 
 .entry-links {
@@ -351,6 +353,10 @@ h3 {
 .timeline-item p {
   margin-bottom: 0;
   color: var(--muted);
+}
+
+.timeline-item p:not(.location) {
+  font-style: italic;
 }
 
 .timeline-item p + p {
