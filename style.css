@@ -252,26 +252,48 @@ h3 {
   padding: 1.2rem;
 }
 
-.metric {
+.expertise-card {
+  transform: translateY(2.4rem);
+}
+
+/* Expertise card layout: labels and descriptions use a responsive two-column grid. */
+.expertise-list {
   display: grid;
-  grid-template-columns: 5rem 1fr;
-  gap: 1rem;
+  gap: 0;
+  margin: 0;
+}
+
+.expertise-item {
+  display: grid;
+  grid-template-columns: minmax(8.5rem, max-content) minmax(0, 1fr);
+  gap: 0.1rem;
+  align-items: start;
   border-bottom: 1px solid var(--line);
-  padding: 0.8rem 0;
+  padding: 1rem 0;
 }
 
-.metric:last-child {
+.expertise-item:first-child {
+  padding-top: 0;
+}
+
+.expertise-item:last-child {
   border-bottom: 0;
+  padding-bottom: 0;
 }
 
-.metric strong {
+.expertise-item dt {
   color: var(--code);
   font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
-  font-size: 0.9rem;
+  font-size: 0.82rem;
+  font-weight: 650;
+  line-height: 1.35;
 }
 
-.metric span {
+.expertise-item dd {
+  margin: 0;
   color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.55;
 }
 
 .section {
@@ -420,13 +442,59 @@ h3 {
 
 .media-gallery {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.2rem;
 }
 
 .gallery-image {
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 3 / 2;
+  cursor: zoom-in;
   margin: 0;
+}
+
+.gallery-image:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: grid;
+  place-items: center;
+  background: rgba(23, 32, 35, 0.84);
+  padding: 1.5rem;
+}
+
+.lightbox[hidden] {
+  display: none;
+}
+
+.lightbox img {
+  max-width: min(100%, 1100px);
+  max-height: 86vh;
+  border-radius: var(--radius);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.35);
+}
+
+.lightbox-close {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  border: 0;
+  border-radius: var(--radius);
+  background: rgba(23, 32, 35, 0.72);
+  padding: 0.45rem 0.7rem;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.lightbox-close:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 3px;
 }
 
 .timeline {
@@ -509,6 +577,15 @@ h3 {
   .hero {
     grid-template-columns: 1fr;
     padding-top: 3.2rem;
+  }
+
+  .expertise-item {
+    grid-template-columns: 1fr;
+    gap: 0.35rem;
+  }
+
+  .expertise-card {
+    transform: none;
   }
 
   .grid,
